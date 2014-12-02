@@ -1,0 +1,21 @@
+/* style classes */
+.text-center {
+	text-align: center;
+}
+.center-block {
+	display: block;
+	margin: 0 auto;
+}
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+}
+
+/* profile */
+#profile {}
+#profileImage {
+	background: #fff;
+	border-radius: 5px;
+	border: solid 1px #ccc;
+	padding: 3px;
+}
