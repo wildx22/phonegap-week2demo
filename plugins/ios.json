@@ -36,6 +36,12 @@
                             "xml": "false",
                             "count": 1
                         }
+                    ],
+                    "AudioToolbox.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
                     ]
                 }
             },
@@ -48,6 +54,14 @@
                         },
                         {
                             "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
                             "count": 1
                         },
                         {
@@ -71,6 +85,12 @@
     },
     "installed_plugins": {
         "org.apache.cordova.camera": {
+            "PACKAGE_NAME": "com.phonegap.week2"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "com.phonegap.week2"
+        },
+        "org.apache.cordova.dialogs": {
             "PACKAGE_NAME": "com.phonegap.week2"
         },
         "org.apache.cordova.geolocation": {

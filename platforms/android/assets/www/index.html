@@ -23,27 +23,70 @@
         	
         	<div data-role="content" align="center">
         		<h3>Cheryl Sun</h3>
-        		<p id="location"></p>
 				
 				<p id="photoResult"></p>
-        		<img id="profileImage" class="img-responsive ui-shadow" src="" />
+        		<img id="profileImage" class="img-responsive ui-shadow img-border" src="" />
         	
         		<p>Select new photo</p>
 	        	<div data-role="controlgroup" data-type="horizontal">
-	        		<button onclick="PhotoCamera();" class="ui-btn ui-corner-all"><i class="fa fa-camera"></i><br /> From Camera </button>
-	        		<button onclick="PhotoLibrary();" class="ui-btn ui-corner-all"><i class="fa fa-photo"></i><br /> From Library</button>
+	        		<button onclick="PhotoCamera(); return false;" class="ui-btn ui-corner-all"><i class="fa fa-camera"></i><br /> From Camera </button>
+	        		<button onclick="PhotoLibrary(); return false;" class="ui-btn ui-corner-all"><i class="fa fa-photo"></i><br /> From Library</button>
 	        	</div>
         	</div>
         	
         	<div data-role="footer" data-position="fixed" data-theme="b">
         		<div data-role="navbar" data-iconpos="bottom">
         			<ul>
-        				<li><a href="#" data-icon="home">Profile</a></li>
-        				<li><a href="#" data-icon="gear">Settings</a></li>
+        				<li><a href="#profile" data-icon="home" class="ui-btn-active">Profile</a></li>
+        				<li><a href="#location" data-icon="navigation">Location</a></li>
+        				<li><a href="#settings" data-icon="gear">Settings</a></li>
         			</ul>
         		</div><!-- end navbar -->
         	</div><!-- end footer -->
-        </div><!-- end start page -->
+        </div><!-- end profile page -->
+        
+        <div data-role="page" id="location" data-theme="a">
+        	<div data-role="header" data-position="fixed" data-theme="b">
+        		<h1>Location</h1>
+        	</div>
+        	
+        	<div data-role="content" align="center">
+        		<button onclick="CurrentLocation(); return false;" class="ui-btn ui-corner-all"><i class="fa fa-map-marker fa-fw"></i> Display Current location</button>
+        		<div id="locationResult"></div>
+        	</div>
+        	
+        	<div data-role="footer" data-position="fixed" data-theme="b">
+        		<div data-role="navbar" data-iconpos="bottom">
+        			<ul>
+        				<li><a href="#profile" data-icon="home">Profile</a></li>
+        				<li><a href="#location" data-icon="navigation" class="ui-btn-active">Location</a></li>
+        				<li><a href="#settings" data-icon="gear">Settings</a></li>
+        			</ul>
+        		</div><!-- end navbar -->
+        	</div><!-- end footer -->
+        </div><!-- end location page -->
+        
+        <div data-role="page" id="settings" data-theme="b">
+        	<div data-role="header" data-position="fixed">
+        		<h1>Device settings</h1>
+        	</div>
+        	
+        	<div data-role="content">
+        		<p id="deviceProperties">Loading device properties...</p>
+        		
+        		<button onclick="showPrompt(); return false;" class="ui-btn ui-corner-all ui-icon-alert ui-btn-icon-left">Prompt me</button>
+			</div>
+        	
+        	<div data-role="footer" data-position="fixed">
+        		<div data-role="navbar" data-iconpos="bottom">
+        			<ul>
+        				<li><a href="#profile" data-icon="home">Profile</a></li>
+        				<li><a href="#location" data-icon="navigation">Location</a></li>
+        				<li><a href="#settings" data-icon="gear">Settings</a></li>
+        			</ul>
+        		</div><!-- end navbar -->
+        	</div><!-- end footer -->
+        </div><!-- end settings page -->
         
     </body>
     
